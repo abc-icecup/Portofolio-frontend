@@ -1,0 +1,740 @@
+/* ================= HOME / LANDING PAGE ================= */
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-white);
+  overflow-x: hidden;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+/* ================= NAVBAR ================= */
+
+.home-navbar {
+  width: min(1438px, 100%);
+  height: 70px;
+  margin: 0 auto;
+  background: #4a7bbd !important;
+  color: var(--text-white, var(--color-white));
+}
+
+.home-navbar-container {
+  width: 100%;
+  height: 70px;
+  padding: 0 28px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.home-logo {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.home-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  background: var(--color-white);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.home-logo span {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  color: #ffffff !important;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+/* ================= NAV BUTTON ================= */
+
+.home-nav-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-nav-link {
+  display: flex;
+  text-decoration: none;
+}
+
+.home-nav-button button {
+  width: 82px;
+  height: 36px;
+  border: none;
+  background: var(--color-white);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: var(--radius-xl);
+  padding: 0;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.home-signin-button {
+  color: var(--color-black);
+}
+
+.home-signup-button {
+  color: var(--secondary-blue, var(--color-secondary));
+}
+
+.home-nav-button button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= MAIN ================= */
+
+.home-main {
+  width: min(1180px, calc(100% - 72px));
+  margin: 0 auto;
+}
+
+/* ================= HERO ================= */
+
+.home-hero {
+  width: 100%;
+  max-width: 1180px;
+  height: 430px;
+  margin: 42px auto 42px;
+  border-radius: var(--radius-lg);
+  background-image:
+    linear-gradient(rgba(7, 37, 88, 0.35), rgba(7, 37, 88, 0.35)),
+    url("../src/assets/images/bg_my_porto.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text-white, var(--color-white));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.home-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-hero h1 {
+  width: auto;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--text-white, var(--color-white));
+  margin: 0;
+}
+
+.home-hero p {
+  width: auto;
+  max-width: 503px;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--text-white, var(--color-white));
+  margin: 6px 0 0;
+}
+
+/* ================= PORTFOLIO SECTION ================= */
+
+.home-portfolio-section {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 62px;
+}
+
+.home-portfolio-section h2 {
+  width: min(661px, 100%);
+  min-height: 44px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-black, var(--color-black));
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.home-portfolio-wrapper {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 560px));
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-portfolio-card {
+  width: 100%;
+  max-width: 560px;
+  height: 330px;
+  background: linear-gradient(135deg, #5a9bd3 0%, #d8ecff 100%);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.home-portfolio-text {
+  width: 275px;
+  height: 260px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  position: absolute;
+  left: 28px;
+  top: 35px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 22px 18px;
+}
+
+.home-portfolio-text h3 {
+  width: 210px;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3d8bd5;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 800;
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+.home-portfolio-text h4 {
+  width: 140px;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-black, var(--color-black));
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 800;
+  margin: 0 0 34px;
+  text-align: center;
+}
+
+.home-portfolio-text p {
+  width: 220px;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-black, var(--color-black));
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+/* Foto default untuk portfolio */
+.home-portfolio-card img {
+  position: absolute;
+  bottom: 0;
+  right: 18px;
+  width: 230px;
+  height: 305px;
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
+  z-index: 1;
+}
+
+/* Khusus foto James A. Snow agar posisinya rapi dan tidak ngambang */
+.home-portfolio-card:first-child img {
+  width: 235px;
+  height: 310px;
+  right: 16px;
+  bottom: 0;
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.home-about-section {
+  text-align: center;
+  margin: 0 auto 46px;
+}
+
+.home-about-section h2 {
+  width: min(856px, 100%);
+  min-height: auto;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-black, var(--color-black));
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: 44px;
+  line-height: 1.2;
+  font-weight: 800;
+  text-align: center;
+}
+
+.home-about-section p {
+  width: min(511px, 100%);
+  min-height: auto;
+  margin: 0 auto 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-blue, var(--color-secondary));
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* ================= FEATURE SECTION ================= */
+
+.home-feature-section {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto 54px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 360px));
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-feature-card {
+  width: 100%;
+  max-width: 360px;
+  height: 370px;
+  background: var(--light-blue, var(--color-light-blue));
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: var(--transition-fast);
+  padding: 22px 0 26px;
+}
+
+.home-feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(47, 111, 169, 0.16);
+}
+
+.home-feature-card img {
+  width: 190px;
+  height: 190px;
+  object-fit: contain;
+  margin: 0 auto 18px;
+}
+
+.home-feature-card h3 {
+  width: 280px;
+  min-height: auto;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--text-black, var(--color-black));
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 800;
+  text-align: left;
+}
+
+.home-feature-card p {
+  width: 280px;
+  min-height: auto;
+  margin: 0 auto;
+  color: var(--text-black, var(--color-black));
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* ================= CTA SECTION ================= */
+
+.home-cta-section {
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.home-cta-section a {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.home-cta-section button {
+  width: 380px;
+  height: 56px;
+  background: var(--primary-blue, var(--color-primary));
+  color: var(--text-white, var(--color-white));
+  border: none;
+  border-radius: var(--radius-xl);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 800;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-cta-section button:hover {
+  background: #357fbd;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(47, 111, 169, 0.24);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .home-main {
+    width: calc(100% - 80px);
+  }
+
+  .home-portfolio-wrapper {
+    max-width: 1060px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  .home-portfolio-card {
+    max-width: 100%;
+    height: 320px;
+  }
+
+  .home-portfolio-text {
+    width: 260px;
+    height: 250px;
+    left: 24px;
+    top: 35px;
+  }
+
+  .home-portfolio-card img {
+    width: 220px;
+    height: 295px;
+    right: 12px;
+  }
+
+  .home-portfolio-card:first-child img {
+    width: 228px;
+    height: 300px;
+    right: 12px;
+    bottom: 0;
+  }
+
+  .home-feature-section {
+    max-width: 1060px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .home-feature-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-navbar {
+    height: 64px;
+  }
+
+  .home-navbar-container {
+    height: 64px;
+    padding: 0 18px;
+  }
+
+  .home-logo {
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .home-logo img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .home-logo span {
+    color: #ffffff !important;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .home-nav-button {
+    gap: 8px;
+  }
+
+  .home-nav-button button {
+    width: 74px;
+    height: 32px;
+    font-size: 11px;
+    border-radius: 24px;
+  }
+
+  .home-main {
+    width: 92%;
+  }
+
+  .home-hero {
+    height: 360px;
+    margin: 32px auto 38px;
+  }
+
+  .home-hero h1 {
+    font-size: 52px;
+  }
+
+  .home-hero p {
+    max-width: 90%;
+    font-size: 20px;
+  }
+
+  .home-portfolio-section h2 {
+    width: 100%;
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .home-portfolio-wrapper {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    gap: 28px;
+  }
+
+  .home-portfolio-card {
+    width: 100%;
+    height: 320px;
+  }
+
+  .home-portfolio-card:first-child img {
+    width: 230px;
+    height: 302px;
+    right: 12px;
+    bottom: 0;
+  }
+
+  .home-about-section h2 {
+    font-size: 34px;
+  }
+
+  .home-about-section p {
+    font-size: 17px;
+  }
+
+  .home-feature-section {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    gap: 26px;
+  }
+
+  .home-feature-card {
+    width: 100%;
+    height: 370px;
+  }
+
+  .home-cta-section button {
+    width: 320px;
+    height: 52px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-navbar {
+    height: 58px;
+  }
+
+  .home-navbar-container {
+    height: 58px;
+    padding: 0 14px;
+  }
+
+  .home-logo {
+    width: auto;
+    height: auto;
+    gap: 8px;
+  }
+
+  .home-logo img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .home-logo span {
+    color: #ffffff !important;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .home-nav-button {
+    gap: 6px;
+  }
+
+  .home-nav-button button {
+    width: 66px;
+    height: 30px;
+    font-size: 10px;
+    border-radius: 24px;
+  }
+
+  .home-main {
+    width: 90%;
+  }
+
+  .home-hero {
+    height: 250px;
+    margin-top: 28px;
+    border-radius: 14px;
+  }
+
+  .home-hero h1 {
+    font-size: 38px;
+  }
+
+  .home-hero p {
+    max-width: 90%;
+    font-size: 15px;
+    margin-top: 4px;
+  }
+
+  .home-portfolio-section {
+    margin-bottom: 46px;
+  }
+
+  .home-portfolio-section h2 {
+    font-size: 20px;
+  }
+
+  .home-portfolio-card {
+    height: 280px;
+    border-radius: var(--radius-md);
+  }
+
+  .home-portfolio-text {
+    width: 55%;
+    height: 225px;
+    left: 16px;
+    top: 27px;
+    padding: 18px 10px;
+  }
+
+  .home-portfolio-text h3 {
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .home-portfolio-text h4 {
+    width: 100%;
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .home-portfolio-text p {
+    width: 90%;
+    font-size: 10px;
+  }
+
+  .home-portfolio-card img {
+    width: 190px;
+    height: 250px;
+    right: -8px;
+  }
+
+  .home-portfolio-card:first-child img {
+    width: 195px;
+    height: 255px;
+    right: -6px;
+    bottom: 0;
+  }
+
+  .home-about-section h2 {
+    font-size: 28px;
+  }
+
+  .home-about-section p {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .home-feature-section {
+    max-width: 100%;
+  }
+
+  .home-feature-card {
+    width: 100%;
+    height: auto;
+    min-height: 330px;
+    padding: 22px 0 24px;
+  }
+
+  .home-feature-card img {
+    width: 155px;
+    height: 155px;
+    margin-bottom: 18px;
+  }
+
+  .home-feature-card h3 {
+    width: 82%;
+    font-size: 19px;
+  }
+
+  .home-feature-card p {
+    width: 82%;
+    font-size: 14px;
+  }
+
+  .home-cta-section button {
+    width: 100%;
+    max-width: 300px;
+    height: 48px;
+    font-size: 20px;
+  }
+}

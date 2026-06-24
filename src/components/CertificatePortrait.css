@@ -1,0 +1,97 @@
+/* ================= CERTIFICATE PORTRAIT POPUP ================= */
+
+.cert-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.cert-popup-view-overlay {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.cert-popup-container {
+  position: relative;
+  text-align: center;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.cert-popup-img {
+  display: block;
+  max-width: 95vw;
+  max-height: 80vh;
+  object-fit: contain;
+  background: white;
+  border-radius: 15px;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.cert-popup-img-portrait {
+  width: auto;
+  height: auto;
+  max-width: 430px;
+}
+
+.cert-popup-close {
+  position: absolute;
+  top: 0;
+  right: -56px;
+  width: 42px;
+  height: 42px;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  color: white;
+  cursor: pointer;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1;
+  padding: 0;
+  box-shadow: none !important;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-popup-close:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .cert-popup-overlay {
+    padding: 16px;
+  }
+
+  .cert-popup-img {
+    max-width: 92vw;
+    max-height: 78vh;
+  }
+
+  .cert-popup-close {
+    top: -42px;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    font-size: 36px;
+  }
+}

@@ -1,0 +1,937 @@
+/* ================= HALAMAN PORTFOLIO TAMU WEBSITE PAGE ================= */
+
+.gt-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-white);
+  overflow-x: hidden;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+/* ================= NAVBAR ================= */
+
+.gt-navbar {
+  width: min(1440px, 100%);
+  height: 70px;
+  margin: 0 auto;
+  background: #4a7bbd !important;
+  color: var(--color-white);
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+.gt-navbar-container {
+  width: 100%;
+  height: 70px;
+  padding: 0 28px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.gt-logo {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gt-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  background: var(--color-white);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.gt-logo span {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  color: var(--color-light-blue);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+/* ================= AUTH BUTTONS ================= */
+
+.gt-auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gt-auth-btn {
+  width: 82px;
+  height: 36px;
+  box-sizing: border-box;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 28px;
+  text-align: center;
+  padding: 0;
+  border: 3px solid var(--color-light-blue);
+  transition: var(--transition-fast);
+}
+
+.gt-sign-in-btn {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.gt-sign-up-btn {
+  background: var(--color-light-blue);
+  color: var(--color-secondary);
+}
+
+.gt-auth-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= MAIN CARD ================= */
+
+.gt-main {
+  width: 100%;
+  max-width: 1308px;
+  margin: 12px auto 70px;
+  padding: 0;
+  background: var(--color-white);
+}
+
+.gt-card {
+  width: 100%;
+  min-height: auto;
+  margin: 0 auto;
+  background: #fffefe;
+  border: 1px solid #d7d7d7;
+  border-radius: var(--radius-xl);
+  box-shadow: none;
+  padding: 38px 62px 60px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  box-sizing: border-box;
+}
+
+.gt-card h2 {
+  margin: 0 0 34px;
+  text-align: center;
+  color: var(--color-black);
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* ================= INTRO ================= */
+
+.gt-intro {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 720px) 260px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  margin-bottom: 26px;
+}
+
+.gt-intro-text {
+  width: 100%;
+  max-width: 720px;
+}
+
+.gt-intro-text h4 {
+  margin: 0 0 4px;
+  color: var(--color-black);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.gt-intro-text h1 {
+  margin: 0 0 14px;
+  color: var(--color-primary);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.gt-intro-text p {
+  width: 100%;
+  max-width: 720px;
+  margin: 0;
+  color: var(--color-black);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* ================= PROFILE PHOTO ================= */
+
+.gt-photo-wrapper {
+  width: 220px;
+  height: 220px;
+  justify-self: center;
+  align-self: center;
+  border-radius: 50%;
+  background: #111111;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.gt-photo {
+  width: 205px;
+  height: 230px;
+  object-fit: contain;
+  object-position: center bottom;
+  border-radius: 0;
+  background: transparent;
+  display: block;
+  transform: translateY(8px);
+}
+
+/* ================= SECTION TITLE ================= */
+
+.gt-skills h3,
+.gt-tools h3,
+.gt-projects h3,
+.gt-certificates h3,
+.gt-contact h3 {
+  margin: 0 0 18px;
+  color: var(--color-black);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* ================= SKILLS ================= */
+
+.gt-skills {
+  margin-bottom: 32px;
+}
+
+.gt-skill-list {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.gt-skill-card {
+  min-width: 128px;
+  height: 48px;
+  padding: 0 18px;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border-soft);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  box-sizing: border-box;
+}
+
+.gt-skill-card img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.gt-skill-card span {
+  color: var(--color-black);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ================= TOOLS (BARU) ================= */
+
+.gt-tools {
+  margin-bottom: 32px;
+}
+
+.gt-tool-list {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.gt-tool-card {
+  min-width: 128px;
+  height: 48px;
+  padding: 0 18px;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border-soft);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  box-sizing: border-box;
+}
+
+.gt-tool-card img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.gt-tool-card span {
+  color: var(--color-black);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ================= PROJECTS ================= */
+
+.gt-projects {
+  margin-bottom: 38px;
+}
+
+.gt-project-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 327.17px);
+  gap: 36px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.gt-page .gt-card .gt-projects .gt-project-list .gt-project-card {
+  position: relative !important;
+  width: 327.17px !important;
+  height: 328px !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  isolation: isolate !important;
+  transition: none !important;
+}
+
+.gt-page .gt-card .gt-projects .gt-project-list .gt-project-card:hover {
+  transform: none !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+.gt-page .gt-card .gt-projects .gt-project-list .gt-project-card::before,
+.gt-page .gt-card .gt-projects .gt-project-list .gt-project-card::after {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+.gt-page .gt-card .gt-projects .gt-project-list .gt-project-card > img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  background: transparent !important;
+  border-radius: 10px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: scale(1.08) !important;
+  transform-origin: center center !important;
+}
+
+.gt-page .gt-card .gt-projects .gt-project-list .gt-project-card .gt-project-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  overflow: hidden !important;
+  border-radius: 10px !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 42%,
+    rgba(0, 0, 0, 0.08) 68%,
+    rgba(0, 0, 0, 0.34) 100%
+  ) !important;
+}
+
+.gt-page .gt-card .gt-projects .gt-project-list .gt-project-card .gt-project-overlay::before,
+.gt-page .gt-card .gt-projects .gt-project-list .gt-project-card .gt-project-overlay::after {
+  content: none !important;
+  display: none !important;
+}
+
+.gt-project-text {
+  width: 100%;
+  padding: 0 16px 16px;
+  box-sizing: border-box;
+  color: var(--color-white);
+  z-index: 5;
+}
+
+.gt-project-text h4 {
+  margin: 0 0 14px;
+  color: var(--color-white);
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.38);
+}
+
+/* ================= BUTTON DETAILS PROJECT ================= */
+
+.gt-project-text a {
+  display: inline-flex;
+  text-decoration: none;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+.gt-project-text button {
+  width: 104px;
+  height: 38px;
+  border: none;
+  border-radius: 12px;
+  background: #c8bebe;
+  color: var(--color-white);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.gt-project-text button::before {
+  content: "Details";
+  color: var(--color-white);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.gt-project-text button::after {
+  content: "›";
+  color: var(--color-white);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 0.7;
+  margin-top: -1px;
+}
+
+.gt-project-text button:hover {
+  background: #b9adad;
+  transform: translateY(-1px);
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+/* ================= CERTIFICATES (DIPERBAIKI AGAR LURUS & SYNC) ================= */
+
+.gt-certificates {
+  margin-bottom: 44px;
+}
+
+.gt-certificate-list {
+  width: 100%;
+  display: grid !important;                               /* Berubah ke Grid agar sejajar dengan project */
+  grid-template-columns: repeat(3, 327.17px) !important;  /* Ukuran kolom disamakan dengan project */
+  gap: 36px !important;                                   /* Jarak/gap disamakan dengan project */
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.gt-page .gt-card .gt-certificates .gt-certificate-list .gt-certificate-card {
+  width: 327.17px !important;                             /* Dikunci mengikuti lebar project */
+  height: 328px !important;                               /* Dikunci mengikuti tinggi project */
+  background: #c9c9c9 !important;                         /* Dasar warna abu-abu box */
+  border-radius: 10px !important;                         /* Lekukan ujung disamakan dengan project */
+  border: none !important;
+  outline: none !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;      /* Efek bayangan disamakan dengan project */
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.gt-page .gt-card .gt-certificates .gt-certificate-list .gt-certificate-card:hover {
+  transform: none !important;
+  background: #c9c9c9 !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+}
+
+.gt-page .gt-card .gt-certificates .gt-certificate-list .gt-certificate-card::before,
+.gt-page .gt-card .gt-certificates .gt-certificate-list .gt-certificate-card::after {
+  content: none !important;
+  display: none !important;
+}
+
+.gt-page .gt-card .gt-certificates .gt-certificate-list .gt-certificate-card img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;                         /* Mencegah gambar sertifikat gepeng */
+  object-position: center !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.gt-page .gt-card .gt-certificates .gt-certificate-list .gt-certificate-card:first-child img,
+.gt-page .gt-card .gt-certificates .gt-certificate-list .gt-certificate-card:nth-child(2) img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+/* ================= POPUP MODAL (BATAS UKURAN POPUP MODAL) ================= */
+
+.gt-page img[alt="Certificate 1"],
+.gt-page img[alt="Certificate 2"],
+.CertificatePortrait img,
+.CertificateLandscape img,
+[class*="modal"] img, 
+[class*="popup"] img {
+  max-width: 75vw !important;  
+  max-height: 75vh !important; 
+  object-fit: contain !important; 
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35); 
+  border-radius: 12px !important; 
+}
+
+/* ================= CONTACT ================= */
+
+.gt-contact {
+  margin-bottom: 0;
+}
+
+.gt-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+.gt-contact-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e6eef6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gt-contact-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+.gt-contact-item a {
+  color: var(--color-primary);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1350px) {
+  .gt-main {
+    width: calc(100% - 44px);
+    max-width: 1308px;
+    margin-top: 12px;
+  }
+
+  .gt-card {
+    width: 100%;
+    min-height: auto;
+    padding: 38px 62px 60px;
+  }
+
+  .gt-intro {
+    grid-template-columns: minmax(0, 720px) 240px;
+    gap: 50px;
+  }
+
+  .gt-photo-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+
+  .gt-photo {
+    width: 205px;
+    height: 220px;
+  }
+
+  .gt-project-list {
+    grid-template-columns: repeat(3, 327.17px);
+    gap: 28px;
+  }
+
+  .gt-page .gt-card .gt-projects .gt-project-list .gt-project-card {
+    width: 327.17px !important;
+    height: 328px !important;
+  }
+
+  .gt-certificate-list {
+    grid-template-columns: repeat(3, 327.17px) !important;
+    gap: 28px !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .gt-card {
+    padding: 34px 42px 54px;
+  }
+
+  .gt-card h2 {
+    margin-bottom: 30px;
+  }
+
+  .gt-intro {
+    grid-template-columns: 1fr 220px;
+    gap: 34px;
+  }
+
+  .gt-project-list {
+    grid-template-columns: repeat(2, 327.17px);
+    justify-content: center;
+  }
+
+  .gt-certificate-list {
+    grid-template-columns: repeat(2, 327.17px) !important;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .gt-navbar {
+    height: 64px;
+  }
+
+  .gt-navbar-container {
+    height: 64px;
+    padding: 0 18px;
+  }
+
+  .gt-logo {
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .gt-logo img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .gt-logo span {
+    width: auto;
+    height: auto;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .gt-auth-buttons {
+    gap: 8px;
+  }
+
+  .gt-auth-btn {
+    width: 74px;
+    height: 32px;
+    font-size: 11px;
+    line-height: 25px;
+    border-width: 3px;
+  }
+
+  .gt-main {
+    width: 92%;
+    margin-top: 14px;
+  }
+
+  .gt-card {
+    min-height: auto;
+    padding: 28px 22px 44px;
+    border-radius: 18px;
+  }
+
+  .gt-card h2 {
+    font-size: 28px;
+    margin-bottom: 26px;
+  }
+
+  .gt-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .gt-intro-text {
+    max-width: 100%;
+  }
+
+  .gt-intro-text p {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .gt-photo-wrapper {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    order: -1;
+  }
+
+  .gt-photo {
+    width: 180px;
+    height: 190px;
+  }
+
+  .gt-skills h3,
+  .gt-projects h3,
+  .gt-certificates h3,
+  .gt-contact h3 {
+    font-size: 22px;
+  }
+
+  .gt-skill-list {
+    justify-content: center;
+  }
+
+  .gt-project-list {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .gt-page .gt-card .gt-projects .gt-project-list .gt-project-card {
+    width: 327.17px !important;
+    height: 328px !important;
+  }
+
+  .gt-certificate-list {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    gap: 20px !important;
+  }
+
+  .gt-page .gt-card .gt-certificates .gt-certificate-list .gt-certificate-card {
+    width: 327.17px !important;
+    height: 328px !important;
+  }
+
+  .gt-contact {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .gt-navbar {
+    height: 58px;
+  }
+
+  .gt-navbar-container {
+    height: 58px;
+    padding: 0 14px;
+  }
+
+  .gt-logo {
+    gap: 8px;
+  }
+
+  .gt-logo img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .gt-logo span {
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .gt-auth-buttons {
+    gap: 6px;
+  }
+
+  .gt-auth-btn {
+    width: 66px;
+    height: 30px;
+    font-size: 10px;
+    line-height: 23px;
+    border-width: 3px;
+  }
+
+  .gt-main {
+    margin-top: 12px;
+  }
+
+  .gt-card {
+    padding: 22px 16px 38px;
+  }
+
+  .gt-card h2 {
+    font-size: 22px;
+  }
+
+  .gt-intro-text h4 {
+    font-size: 18px;
+  }
+
+  .gt-intro-text h1 {
+    font-size: 36px;
+  }
+
+  .gt-intro-text p {
+    font-size: 14px;
+  }
+
+  .gt-photo-wrapper {
+    width: 170px;
+    height: 170px;
+  }
+
+  .gt-photo {
+    width: 150px;
+    height: 160px;
+  }
+
+  .gt-skill-card,
+  .gt-tool-card {
+    width: 100%;
+  }
+
+  .gt-page .gt-card .gt-projects .gt-project-list .gt-project-card {
+    width: 100% !important;
+    max-width: 327.17px !important;
+    height: 328px !important;
+  }
+
+  .gt-page .gt-card .gt-projects .gt-project-list .gt-project-card > img {
+    transform: scale(1.08) !important;
+  }
+
+  .gt-project-text {
+    padding: 0 14px 14px;
+  }
+
+  .gt-project-text h4 {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .gt-project-text button {
+    width: 96px;
+    height: 36px;
+    border-radius: 11px;
+    gap: 7px;
+    font-weight: 400;
+  }
+
+  .gt-project-text button::before {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .gt-project-text button::after {
+    font-size: 26px;
+    font-weight: 400;
+  }
+
+  .gt-certificate-list {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    gap: 20px !important;
+  }
+
+  .gt-page .gt-card .gt-certificates .gt-certificate-list .gt-certificate-card {
+    width: 100% !important;
+    max-width: 327.17px !important;
+    height: 328px !important;
+  }
+
+  .gt-page .gt-card .gt-certificates .gt-certificate-list .gt-certificate-card img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .gt-contact-item {
+    width: 100%;
+    justify-content: center;
+  }
+}

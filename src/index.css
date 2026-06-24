@@ -1,0 +1,104 @@
+/* ================= FONT ================= */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+
+/* ================= PAGE CSS ================= */
+
+/* ================= FIXES ================= */
+
+/* @import "./styles/fixes/project-card-fix.css";
+@import "./styles/fixes/guest-icon-final-fix.css"; */
+
+/* ================= DESIGN TOKENS ================= */
+:root {
+  /* Font */
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Playfair Display", serif;
+
+  /* Brand colors */
+  --color-primary: #4b92cf;
+  --color-primary-alt: #4b97d3;
+  --color-primary-dark: #3b84c3;
+  --color-secondary: #4b88c1;
+  --color-light-blue: #d3e4f5;
+
+  /* Neutral colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-text-muted: #333333;
+  --color-text-soft: #777777;
+  --color-border: #e5e5e5;
+  --color-border-soft: #e5e7eb;
+  --color-border-light: #eeeeee;
+  --color-border-muted: #dddddd;
+
+  /* Shared shape, shadow, and motion */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 3px 7px rgba(0, 0, 0, 0.1);
+
+  --transition-fast: 0.25s ease;
+
+  /* Backward-compatible aliases */
+  --primary-blue: var(--color-primary);
+  --secondary-blue: var(--color-secondary);
+  --light-blue: var(--color-light-blue);
+  --text-black: var(--color-black);
+  --text-white: var(--color-white);
+}
+
+/* ================= GLOBAL ================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: #f4f6f9;
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading);
+}
+
+h3 {
+  font-family: var(--font-body);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+}
+
+
+
+/* ================= MATERIAL ICON ================= */
+
+.material-icons {
+  font-family: "Material Icons" !important;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}

@@ -1,0 +1,86 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  
+  background: #4a7bbd;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px; /* ⬅️ INI KUNCI BIAR GA KE POTONG */
+  box-sizing: border-box;
+
+  z-index: 1000;
+  font-family: 'Inter', sans-serif;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.icon-btn {
+  background: white;
+  border-radius: 50%;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.icon-btn.active {
+  background-color: #dcecff;
+}
+
+.icon-btn.active:hover {
+  background-color: #dcecff;
+}
+
+.document-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.menu-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.menu-btn:hover {
+  background: #e6ecf7;
+}
+
+.menu-icon {
+  width: 22px;
+  height: 22px;
+}

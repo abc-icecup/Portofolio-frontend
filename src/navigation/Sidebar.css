@@ -1,0 +1,80 @@
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 240px;
+  height: calc(100vh - 70px);
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 20px 12px;
+  z-index: 999;
+  font-family: 'Inter', sans-serif;
+
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+/* SIDEBAR TERTUTUP */
+.sidebar.closed {
+  width: 80px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: -2px;
+}
+
+.sidebar li {
+  margin-bottom: 8px;
+}
+
+/* LINK */
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 14px;
+  border-radius: 999px;
+
+  text-decoration: none;
+  color: black;
+
+  transition: all 0.2s ease;
+}
+
+/* HOVER */
+.sidebar a:hover {
+  background: #e6ecf7;
+}
+
+/* ACTIVE */
+.sidebar a.active {
+  background: #4a7bbd;
+  color: white;
+}
+
+/* ICON */
+.icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+
+  color: black;
+}
+
+/* ICON ACTIVE */
+.sidebar a.active .icon {
+  color: white;
+}
+
+/* TEXT HILANG SAAT CLOSE */
+.sidebar.closed a span {
+  display: none;
+}
+
+/* CENTER ICON SAAT CLOSE */
+.sidebar.closed a {
+  justify-content: center;
+}

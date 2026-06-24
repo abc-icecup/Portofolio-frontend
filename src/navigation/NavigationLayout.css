@@ -1,0 +1,21 @@
+.layout-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* CONTENT UTAMA */
+.layout-content {
+  padding-top: 70px;
+
+  transition: margin-left 0.3s ease;
+}
+
+/* SIDEBAR TERBUKA */
+.layout-content.sidebar-open {
+  margin-left: 240px;
+}
+
+/* SIDEBAR TERTUTUP */
+.layout-content.sidebar-closed {
+  margin-left: 80px;
+}

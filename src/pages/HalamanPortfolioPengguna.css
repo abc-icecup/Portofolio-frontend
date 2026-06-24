@@ -1,0 +1,917 @@
+/* ================= PORTFOLIO USER PAGE ================= */
+
+.pf-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-white);
+  font-family: var(--font-body, "Inter", sans-serif);
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.pf-navbar {
+  width: min(1440px, 100%);
+  height: 70px;
+  margin: 0 auto;
+  background: #4a7bbd;
+  color: var(--color-white);
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+.pf-navbar-container {
+  width: 100%;
+  height: 70px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.pf-navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pf-menu-button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pf-menu-button img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+}
+
+.pf-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pf-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  background: var(--color-white);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.pf-logo span {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  color: var(--color-light-blue);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+.pf-icon-circle {
+  width: 46px;
+  height: 46px;
+  background: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pf-icon-circle img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+}
+
+/* ================= MAIN ================= */
+
+.pf-main {
+  width: 100%;
+  max-width: 1308px;
+  margin: 12px auto 70px;
+}
+
+.pf-card {
+  width: 100%;
+  min-height: auto;
+  background: #fffefe;
+  border: 1px solid #d7d7d7;
+  border-radius: var(--radius-xl);
+  padding: 38px 62px 60px;
+  margin: 0 auto;
+  font-family: var(--font-body, "Inter", sans-serif);
+  box-sizing: border-box;
+}
+
+/* ================= TITLE ================= */
+
+.pf-card h2 {
+  margin: 0 0 34px;
+  text-align: center;
+  color: var(--color-black);
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* ================= INTRO ================= */
+
+.pf-intro {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 720px) 260px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  margin-bottom: 26px;
+}
+
+.pf-intro-text {
+  width: 100%;
+  max-width: 720px;
+}
+
+.pf-intro-text h4 {
+  margin: 0 0 4px;
+  color: var(--color-black);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.pf-intro-text h1 {
+  margin: 0 0 14px;
+  color: var(--color-primary);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.pf-intro-text p {
+  width: 100%;
+  max-width: 720px;
+  margin: 0;
+  color: var(--color-black);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* ================= PROFILE PHOTO ================= */
+
+.pf-photo-wrapper {
+  width: 220px;
+  height: 220px;
+  justify-self: center;
+  align-self: center;
+  border-radius: 50%;
+  background: #111111;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.pf-photo {
+  width: 205px;
+  height: 230px;
+  object-fit: cover;
+  object-position: center bottom;
+  border-radius: 0;
+  background: transparent;
+  display: block;
+  transform: none;
+}
+
+/* ================= SECTION TITLES ================= */
+
+.pf-skills h3,
+.pf-tools h3,
+.pf-projects h3,
+.pf-certificates h3,
+.pf-contact h3 {
+  margin: 0 0 18px;
+  color: var(--color-black);
+  font-family: var(--font-body, "Playfair Display", serif);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* ================= SKILLS ================= */
+
+.pf-skills {
+  margin-bottom: 32px;
+}
+
+.pf-skill-list {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.pf-skill-card {
+  min-width: 128px;
+  height: 48px;
+  padding: 0 18px;
+  border-radius: 30px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border-soft);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+.pf-skill-card img {
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  flex-shrink: 0;
+}
+
+.pf-skill-card span {
+  color: var(--color-black);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ================= TOOLS (BARU) ================= */
+
+.pf-tools {
+  margin-bottom: 32px;
+}
+
+.pf-tool-list {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.pf-tool-card {
+  min-width: 128px;
+  height: 48px;
+  padding: 0 18px;
+  border-radius: 30px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border-soft);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+.pf-tool-card img {
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  flex-shrink: 0;
+}
+.pf-tool-card span {
+  color: var(--color-black);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ================= PROJECTS ================= */
+
+.pf-projects {
+  margin-bottom: 38px;
+}
+
+.pf-project-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 327.17px);
+  gap: 36px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pf-project-card {
+  position: relative;
+  width: 327.17px;
+  height: 328px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  isolation: isolate;
+}
+
+.pf-project-card:hover {
+  transform: none;
+}
+
+.pf-project-card::before,
+.pf-project-card::after {
+  content: none;
+}
+
+.pf-project-card > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  transform: scale(1.08);
+}
+
+.pf-project-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 42%,
+    rgba(0, 0, 0, 0.08) 68%,
+    rgba(0, 0, 0, 0.34) 100%
+  );
+}
+
+.pf-page .pf-card .pf-projects .pf-project-list .pf-project-card .pf-project-overlay::before,
+.pf-page .pf-card .pf-projects .pf-project-list .pf-project-card .pf-project-overlay::after {
+  content: none !important;
+  display: none !important;
+}
+
+.pf-project-text {
+  width: 100%;
+  padding: 0 16px 16px;
+  box-sizing: border-box;
+  color: var(--color-white);
+  z-index: 5;
+}
+
+.pf-project-text h4 {
+  margin: 0 0 14px;
+  color: var(--color-white);
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.38);
+}
+
+/* ================= BUTTON DETAILS PROJECT ================= */
+
+.pf-project-text a {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.pf-project-text button {
+  width: 104px;
+  height: 38px;
+  border: none;
+  border-radius: 12px;
+  background: #c8bebe;
+  color: var(--color-white);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.pf-project-text button::before {
+  content: "Details";
+  color: var(--color-white);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.pf-project-text button::after {
+  content: "›";
+  color: var(--color-white);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 0.7;
+  margin-top: -1px;
+}
+
+.pf-project-text button:hover {
+  background: #b9adad;
+  transform: translateY(-1px);
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+/* ================= CERTIFICATES (SUDAH SEJAJAR LURUS) ================= */
+
+.pf-certificates {
+  margin-bottom: 44px;
+}
+
+.pf-certificate-list {
+  width: 100%;
+  display: grid !important; 
+  grid-template-columns: repeat(3, 327.17px) !important; 
+  gap: 36px !important; 
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.pf-certificate-card {
+  width: 327.17px;
+  height: 328px;
+  background: #c9c9c9;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pf-certificate-card:hover {
+  transform: none;
+}
+
+.pf-page .pf-card .pf-certificates .pf-certificate-list .pf-certificate-card::before,
+.pf-page .pf-card .pf-certificates .pf-certificate-list .pf-certificate-card::after {
+  content: none !important;
+  display: none !important;
+}
+
+.pf-certificate-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pf-page .pf-card .pf-certificates .pf-certificate-list .pf-certificate-card:first-child img,
+.pf-page .pf-card .pf-certificates .pf-certificate-list .pf-certificate-card:nth-child(2) img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+/* ================= CONTACT ================= */
+
+.pf-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.pf-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+.pf-contact-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e6eef6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pf-contact-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+.pf-contact-item a {
+  color: var(--color-primary);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.pf-image-modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.pf-image-modal-container {
+  position: relative;
+}
+
+.pf-image-modal {
+  max-width: 80vw;
+  max-height: 80vh;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+
+  box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+}
+
+.pf-image-close {
+  position: absolute;
+
+  top: -50px;
+  right: 0;
+
+  background: none;
+  border: none;
+
+  color: white;
+
+  font-size: 40px;
+
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1350px) {
+  .pf-main {
+    width: calc(100% - 44px);
+    max-width: 1308px;
+    margin-top: 12px;
+  }
+
+  .pf-card {
+    width: 100%;
+    min-height: auto;
+    padding: 38px 62px 60px;
+  }
+
+  .pf-intro {
+    grid-template-columns: minmax(0, 720px) 240px;
+    gap: 50px;
+  }
+
+  .pf-photo-wrapper {
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+  }
+
+  .pf-photo {
+    width: 205px;
+    height: 220px;
+  }
+
+  .pf-project-list {
+    grid-template-columns: repeat(3, 327.17px);
+    gap: 28px;
+  }
+
+  .pf-project-card {
+    width: 327.17px !important;
+    height: 328px !important;
+  }
+
+  .pf-certificate-list {
+    grid-template-columns: repeat(3, 327.17px) !important;
+    gap: 28px !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .pf-card {
+    padding: 34px 42px 54px;
+  }
+
+  .pf-card h2 {
+    margin-bottom: 30px;
+  }
+
+  .pf-intro {
+    grid-template-columns: 1fr 220px;
+    gap: 34px;
+  }
+
+  .pf-project-list {
+    grid-template-columns: repeat(2, 327.17px);
+    justify-content: center;
+  }
+
+  .pf-certificate-list {
+    grid-template-columns: repeat(2, 327.17px) !important;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .pf-navbar {
+    height: 64px;
+  }
+
+  .pf-navbar-container {
+    height: 64px;
+    padding: 0 18px;
+  }
+
+  .pf-menu-button,
+  .pf-menu-button img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .pf-logo img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .pf-logo span {
+    width: auto;
+    height: auto;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .pf-icon-circle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .pf-icon-circle img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .pf-main {
+    width: 92%;
+    margin-top: 14px;
+  }
+
+  .pf-card {
+    min-height: auto;
+    padding: 28px 22px 44px;
+    border-radius: 18px;
+  }
+
+  .pf-card h2 {
+    font-size: 28px;
+    margin-bottom: 26px;
+  }
+
+  .pf-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .pf-intro-text {
+    max-width: 100%;
+  }
+
+  .pf-intro-text p {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .pf-photo-wrapper {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+  }
+
+  .pf-photo {
+    width: 180px;
+    height: 190px;
+  }
+
+  .pf-skills h3,
+  .pf-projects h3,
+  .pf-certificates h3,
+  .pf-contact h3 {
+    font-size: 22px;
+  }
+
+  .pf-project-list {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .pf-page .pf-card .pf-projects .pf-project-list .pf-project-card {
+    width: 327.17px !important;
+    height: 328px !important;
+  }
+
+  .pf-certificate-list {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    gap: 20px !important;
+  }
+
+  .pf-page .pf-card .pf-certificates .pf-certificate-list .pf-certificate-card {
+    width: 327.17px !important;
+    height: 328px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .pf-navbar {
+    height: 58px;
+  }
+
+  .pf-navbar-container {
+    height: 58px;
+    padding: 0 14px;
+  }
+
+  .pf-navbar-left {
+    gap: 10px;
+  }
+
+  .pf-menu-button,
+  .pf-menu-button img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pf-logo {
+    gap: 8px;
+  }
+
+  .pf-logo img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .pf-logo span {
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .pf-icon-circle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .pf-icon-circle img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pf-card {
+    padding: 22px 16px 38px;
+  }
+
+  .pf-card h2 {
+    font-size: 22px;
+  }
+
+  .pf-intro-text h4 {
+    font-size: 18px;
+  }
+
+  .pf-intro-text h1 {
+    font-size: 36px;
+  }
+
+  .pf-intro-text p {
+    font-size: 14px;
+  }
+
+  .pf-photo-wrapper {
+    width: 170px;
+    height: 170px;
+    cursor: pointer;
+  }
+
+  .pf-photo {
+    width: 150px;
+    height: 160px;
+  }
+
+  .pf-skill-card,
+  .pf-tool-card {
+    width: 100%;
+  }
+
+  .pf-project-card {
+    width: 100% !important;
+    max-width: 327.17px !important;
+    height: 328px !important;
+  }
+
+  .pf-page .pf-card .pf-projects .pf-project-list .pf-project-card > img {
+    transform: scale(1.08) !important;
+  }
+
+  .pf-project-text {
+    padding: 0 14px 14px;
+  }
+
+  .pf-project-text h4 {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .pf-project-text button {
+    width: 96px;
+    height: 36px;
+    border-radius: 11px;
+    gap: 7px;
+    font-weight: 400;
+  }
+
+  .pf-project-text button::before {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .pf-project-text button::after {
+    font-size: 26px;
+  }
+
+  .pf-certificate-list {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    gap: 20px !important;
+  }
+
+  .pf-page .pf-card .pf-certificates .pf-certificate-list .pf-certificate-card {
+    width: 100% !important;
+    max-width: 327.17px !important;
+    height: 328px !important;
+  }
+
+  .pf-page .pf-card .pf-certificates .pf-certificate-list .pf-certificate-card img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .pf-contact-item {
+    width: 100%;
+    justify-content: center;
+  }
+}
