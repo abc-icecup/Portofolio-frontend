@@ -7,6 +7,7 @@ import profile2 from "../assets/images/profile2.svg";
 import gambar1 from "../assets/images/gambar1.svg";
 import gambar2 from "../assets/images/gambar2.svg";
 import gambar3 from "../assets/images/gambar3.svg";
+import bgHero from "../assets/images/bg_my_porto.svg";
 
 function LandingPage() {
   return (
@@ -35,7 +36,15 @@ function LandingPage() {
       </header>
 
       <main className="home-main">
-        <section className="home-hero">
+        <section
+          className="home-hero"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(7, 37, 88, 0.35), rgba(7, 37, 88, 0.35)),
+              url(${bgHero})
+            `,
+          }}
+        >
           <div className="home-hero-content">
             <h1>MyPorto</h1>
             <p>Create your portfolio fastly</p>

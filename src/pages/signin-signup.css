@@ -28,9 +28,6 @@
 .auth-left {
   width: 46%;
   min-height: 590px;
-  background-image:
-    linear-gradient(rgba(4, 21, 55, 0.24), rgba(4, 21, 55, 0.24)),
-    url("../src/assets/images/bg_my_porto.svg");
   background-size: cover;
   background-position: center;
   position: relative;

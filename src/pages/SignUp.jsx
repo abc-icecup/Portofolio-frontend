@@ -6,6 +6,7 @@ import "./signin-signup.css";
 
 
 import logo from "../assets/images/logo_my_porto.svg";
+import bgHero from "../assets/images/bg_my_porto.svg";
 
 function SignUp() {
 
@@ -65,7 +66,15 @@ function SignUp() {
   return (
     <div className="auth-page">
       <div className="auth-container">
-        <div className="auth-left">
+        <div
+          className="auth-left"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(4, 21, 55, 0.24), rgba(4, 21, 55, 0.24)),
+              url(${bgHero})
+            `,
+          }}
+        >
           <div className="auth-logo">
             <img src={logo} alt="Logo MyPorto" />
           </div>

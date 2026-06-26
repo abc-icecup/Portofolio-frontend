@@ -114,9 +114,6 @@
   height: 430px;
   margin: 42px auto 42px;
   border-radius: var(--radius-lg);
-  background-image:
-    linear-gradient(rgba(7, 37, 88, 0.35), rgba(7, 37, 88, 0.35)),
-    url("../src/assets/images/bg_my_porto.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
