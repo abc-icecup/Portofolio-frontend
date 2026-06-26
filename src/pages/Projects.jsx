@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import API_URL from "../api";
 
 import NavigationLayout from "../navigation/NavigationLayout";
-import AddProjectModal from "../components/AddProjectModal";
+import AddProjectModal from "../components/addProjectModal";
 import "./Projects.css";
 
 import EditIcon from "../assets/edit.svg?react";
