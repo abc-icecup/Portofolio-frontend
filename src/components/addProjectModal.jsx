@@ -1,7 +1,7 @@
 import React, { useState, useEffect, } from "react";
 import axios from "axios";
-import "./AddProjectModal.css";
-import AddSkillModal from "./AddSkillModal";
+import "./addProjectModal.css";
+import AddSkillModal from "./addSkillModal";
 import { toast } from "react-toastify";
 import API_URL from "../api";
 
