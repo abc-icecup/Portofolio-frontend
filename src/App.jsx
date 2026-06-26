@@ -12,7 +12,7 @@ import Profile from "./pages/Profile";
 
 // ===== PORTFOLIO =====
 import HalamanPortfolioPengguna from "./pages/HalamanPortfolioPengguna";
-import HalamanPortfolioTamu from "./pages/HalamanPortfolioTamu";
+// import HalamanPortfolioTamu from "./pages/HalamanPortfolioTamu";
 
 // ===== AUTH =====
 import SignIn from "./pages/SignIn";
@@ -41,7 +41,7 @@ function App() {
 
         {/* ===== PORTFOLIO ===== */}
         <Route path="/portfolio" element={<HalamanPortfolioPengguna />} />
-        <Route path="/portfolio-tamu" element={<HalamanPortfolioTamu />} />
+        {/* <Route path="/portfolio-tamu" element={<HalamanPortfolioTamu />} /> */}
 
         {/* ===== AUTH ===== */}
         <Route path="/signin" element={<SignIn />} />
