@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import NavigationLayout from "../navigation/NavigationLayout";
 import { useEffect, useState } from "react";
+import API_URL from "../api";
 
 import "./HalamanPortfolioPengguna.css";
 import linkIcon from "../assets/images/ikon_link.svg";
@@ -37,22 +38,22 @@ function HalamanPortfolioPengguna() {
         ] = await Promise.all([
 
           fetch(
-            "http://localhost:5000/profile",
+            `${API_URL}/profile`,
             { headers }
           ),
 
           fetch(
-            "http://localhost:5000/skills",
+            `${API_URL}/skills`,
             { headers }
           ),
 
           fetch(
-            "http://localhost:5000/projects",
+            `${API_URL}/projects`,
             { headers }
           ),
 
           fetch(
-            "http://localhost:5000/certificates",
+            `${API_URL}/certificates`,
             { headers }
           ),
 
@@ -176,7 +177,7 @@ function HalamanPortfolioPengguna() {
               className="pf-photo-wrapper"
               onClick={() =>
                 openImageModal(
-                  `http://localhost:5000/${profile.Profile.profile_image.replaceAll("\\", "/")}`
+                  `${API_URL}/${profile.Profile.profile_image.replaceAll("\\", "/")}`
                 )
               }
             >
@@ -184,7 +185,7 @@ function HalamanPortfolioPengguna() {
               <img
                 src={
                   profile?.Profile?.profile_image
-                    ? `http://localhost:5000/${profile.Profile.profile_image.replaceAll("\\", "/")}`
+                    ? `${API_URL}/${profile.Profile.profile_image.replaceAll("\\", "/")}`
                     : ""
                 }
                 alt="Profile"
@@ -207,7 +208,7 @@ function HalamanPortfolioPengguna() {
                 >
 
                   <img
-                    src={`http://localhost:5000/${skill.icon.replaceAll("\\", "/")}`}
+                    src={`${API_URL}/${skill.icon.replaceAll("\\", "/")}`}
                     alt={skill.name}
                   />
 
@@ -236,7 +237,7 @@ function HalamanPortfolioPengguna() {
                 >
 
                   <img
-                    src={`http://localhost:5000/${tool.icon.replaceAll("\\", "/")}`}
+                    src={`${API_URL}/${tool.icon.replaceAll("\\", "/")}`}
                     alt={tool.name}
                   />
 
@@ -311,11 +312,11 @@ function HalamanPortfolioPengguna() {
                   >
 
                     <img
-                      src={`http://localhost:5000/${certificate.image.replaceAll("\\", "/")}`}
+                      src={`${API_URL}/${certificate.image.replaceAll("\\", "/")}`}
                       alt="certificate"
                       onClick={() =>
                         openImageModal(
-                          `http://localhost:5000/${certificate.image.replaceAll("\\", "/")}`
+                          `${API_URL}/${certificate.image.replaceAll("\\", "/")}`
                         )
                       }
                     />

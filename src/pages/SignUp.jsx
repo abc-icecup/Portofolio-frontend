@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import API_URL from "../api";
 import "./signin-signup.css";
+
 
 import logo from "../assets/images/logo_my_porto.svg";
 
@@ -21,7 +23,7 @@ function SignUp() {
     try {
 
       const response = await axios.post(
-        "http://localhost:5000/auth/register",
+        `${API_URL}/auth/register`,
         {
           username,
           email,

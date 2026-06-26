@@ -1,6 +1,7 @@
 import NavigationLayout from "../navigation/NavigationLayout";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import API_URL from "../api";
 
 import "./Dashboard.css";
 
@@ -37,17 +38,17 @@ export default function Dashboard() {
         ] = await Promise.all([
 
           fetch(
-            "http://localhost:5000/projects",
+            `${API_URL}/projects`,
             { headers }
           ),
 
           fetch(
-            "http://localhost:5000/certificates",
+            `${API_URL}/certificates`,
             { headers }
           ),
 
           fetch(
-            "http://localhost:5000/skills",
+            `${API_URL}/skills`,
             { headers }
           ),
 
@@ -221,7 +222,7 @@ export default function Dashboard() {
               >
 
                 <img
-                  src={`http://localhost:5000/${skill.icon.replaceAll("\\", "/")}`}
+                  src={`${API_URL}/${skill.icon.replaceAll("\\", "/")}`}
                   alt={skill.name}
                 />
 
@@ -264,7 +265,7 @@ export default function Dashboard() {
               >
 
                 <img
-                  src={`http://localhost:5000/${tool.icon.replaceAll("\\", "/")}`}
+                  src={`${API_URL}/${tool.icon.replaceAll("\\", "/")}`}
                   alt={tool.name}
                 />
 
@@ -299,7 +300,7 @@ export default function Dashboard() {
 
               <img
                 key={certificate.id}
-                src={`http://localhost:5000/${certificate.image.replaceAll("\\", "/")}`}
+                src={`${API_URL}/${certificate.image.replaceAll("\\", "/")}`}
                 alt="certificate"
                 onClick={() =>
                   openCertificate(certificate)
@@ -344,7 +345,7 @@ export default function Dashboard() {
           </button>
 
           <img
-            src={`http://localhost:5000/${selectedCert?.image.replaceAll("\\", "/")}`}
+            src={`${API_URL}/${selectedCert?.image.replaceAll("\\", "/")}`}
             alt="certificate"
             className="view-img"
           />

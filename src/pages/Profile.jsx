@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import './Profile.css';
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import API_URL from "../api";
 
 // Integrasi Navigasi Kelompok
 import NavigationLayout from "../navigation/NavigationLayout";
@@ -114,7 +115,7 @@ const Profile = () => {
       // =========================
 
       const response = await fetch(
-        "http://localhost:5000/profile",
+        `${API_URL}/profile`,
         {
           method: "PUT",
 
@@ -166,7 +167,7 @@ const Profile = () => {
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-          "http://localhost:5000/profile",
+          `${API_URL}/profile`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -203,7 +204,7 @@ const Profile = () => {
         if (data.Profile?.profile_image) {
 
           setProfileImage(
-            `http://localhost:5000/${data.Profile.profile_image}`
+            `${API_URL}/${data.Profile.profile_image}`
           );
         }
 

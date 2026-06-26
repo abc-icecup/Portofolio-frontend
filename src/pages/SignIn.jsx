@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./signin-signup.css";
+import API_URL from "../api";
 
+import "./signin-signup.css";
 import logo from "../assets/images/logo_my_porto.svg";
 
 function SignIn() {
@@ -20,7 +21,7 @@ function SignIn() {
     try {
 
       const response = await axios.post(
-        "http://localhost:5000/auth/login",
+        `${API_URL}/auth/login`,
         {
           email,
           password,

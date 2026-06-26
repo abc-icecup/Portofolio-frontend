@@ -3,6 +3,7 @@ import axios from "axios";
 import "./AddProjectModal.css";
 import AddSkillModal from "./AddSkillModal";
 import { toast } from "react-toastify";
+import API_URL from "../api";
 
 function AddProjectModal({ onClose, onProjectAdded, editingProject, }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -80,7 +81,7 @@ function AddProjectModal({ onClose, onProjectAdded, editingProject, }) {
 
       const response =
         await axios.get(
-          "http://localhost:5000/skills",
+          `${API_URL}/skills`,
           {
             headers: {
               Authorization:
@@ -214,7 +215,7 @@ function AddProjectModal({ onClose, onProjectAdded, editingProject, }) {
 
       const response =
         await axios.post(
-          "http://localhost:5000/skills",
+          `${API_URL}/skills`,
           formData,
           {
             headers: {
@@ -451,7 +452,7 @@ function AddProjectModal({ onClose, onProjectAdded, editingProject, }) {
       if (editingProject) {
 
         await axios.put(
-          `http://localhost:5000/projects/${editingProject.id}`,
+          `${API_URL}/projects/${editingProject.id}`,
           formData,
           {
             headers: {
@@ -470,7 +471,7 @@ function AddProjectModal({ onClose, onProjectAdded, editingProject, }) {
       } else {
 
         await axios.post(
-          "http://localhost:5000/projects",
+          `${API_URL}/projects`,
           formData,
           {
             headers: {

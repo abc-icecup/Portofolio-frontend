@@ -8,6 +8,8 @@ import {
   useState,
 } from "react";
 
+import API_URL from "../api";
+
 import "./ProjectDetails.css";
 import NavigationLayout from "../navigation/NavigationLayout";
 
@@ -35,7 +37,7 @@ function ProjectDetails() {
 
           const response =
             await fetch(
-              `http://localhost:5000/projects/${id}`,
+              `${API_URL}/projects/${id}`,
               {
                 headers: {
                   Authorization:

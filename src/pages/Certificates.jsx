@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from "../api";
+
 import './Certificates.css';
 
 // Integrasi Navigasi Kelompok
@@ -20,7 +22,7 @@ const Certificates = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://localhost:5000/certificates",
+        `${API_URL}/certificates`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -44,7 +46,7 @@ const Certificates = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.delete(
-        `http://localhost:5000/certificates/${selectedCert.id}`,
+        `${API_URL}/certificates/${selectedCert.id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -77,7 +79,7 @@ const Certificates = () => {
       formData.append("image", selectedFile);
 
       await axios.post(
-        "http://localhost:5000/certificates",
+        `${API_URL}/certificates`,
         formData,
         {
           headers: {
@@ -121,7 +123,7 @@ const Certificates = () => {
                 <div key={cert.id} className="cert-item-box">
                   {/* Gambar Utama */}
                   <img 
-                    src={`http://localhost:5000/${cert.image}`}
+                    src={`${API_URL}/${cert.image}`}
                     alt="Sertifikat"
                     onClick={() => openView(cert)}
                     className="cert-image-clickable"
@@ -156,7 +158,7 @@ const Certificates = () => {
                 <button onClick={() => setShowView(false)} style={{ position: 'absolute', top: '-50px', right: '0', background: 'none', border: 'none', color: 'white', cursor: 'pointer' }}>
                   <span className="material-icons" style={{ fontSize: '40px' }}>close</span>
                 </button>
-                <img src={`http://localhost:5000/${selectedCert?.image}`} alt="Full View" className="view-img" />
+                <img src={`${API_URL}/${selectedCert?.image}`} alt="Full View" className="view-img" />
               </div>
             </div>
           )}

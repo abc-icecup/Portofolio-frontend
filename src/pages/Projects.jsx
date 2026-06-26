@@ -1,6 +1,8 @@
 import React, { useState, useEffect, } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import API_URL from "../api";
+
 import NavigationLayout from "../navigation/NavigationLayout";
 import AddProjectModal from "../components/AddProjectModal";
 import "./Projects.css";
@@ -29,7 +31,7 @@ function Projects() {
 
         const response =
           await fetch(
-            "http://localhost:5000/projects",
+            `${API_URL}/projects`,
             {
               headers: {
                 Authorization:
@@ -77,7 +79,7 @@ function Projects() {
           localStorage.getItem("token");
 
         await axios.delete(
-          `http://localhost:5000/projects/${selectedProject.id}`,
+          `${API_URL}/projects/${selectedProject.id}`,
           {
             headers: {
               Authorization:
@@ -196,7 +198,7 @@ function Projects() {
 
                       const response =
                         await axios.get(
-                          `http://localhost:5000/projects/${project.id}`,
+                          `${API_URL}/projects/${project.id}`,
                           {
                             headers: {
                               Authorization:

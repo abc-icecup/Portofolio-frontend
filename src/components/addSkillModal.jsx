@@ -1,3 +1,4 @@
+import API_URL from "../api";
 import "./addSkillModal.css";
 
 function AddSkillModal({
@@ -51,7 +52,7 @@ function AddSkillModal({
               src={
                 skillIcon.startsWith("blob:")
                   ? skillIcon
-                  : `http://localhost:5000/${skillIcon}`
+                  : `${API_URL}/${skillIcon}`
               }
               alt="preview"
             />

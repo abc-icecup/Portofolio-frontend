@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import API_URL from "../api";
 import "./Skills.css";
 
 // Integrasi Navigasi Kelompok
@@ -98,7 +99,7 @@ const Skills = () => {
 
         await axios.put(
 
-          `http://localhost:5000/skills/${selectedId}`,
+          `${API_URL}/skills/${selectedId}`,
 
           formData,
 
@@ -120,7 +121,7 @@ const Skills = () => {
 
         await axios.post(
 
-          "http://localhost:5000/skills",
+          `${API_URL}/skills`,
 
           formData,
 
@@ -156,7 +157,7 @@ const Skills = () => {
 
       await axios.delete(
 
-        `http://localhost:5000/skills/${selectedId}`,
+        `${API_URL}/skills/${selectedId}`,
 
         {
           headers: {
@@ -186,7 +187,7 @@ const Skills = () => {
 
       const response =
         await axios.get(
-          "http://localhost:5000/skills",
+          `${API_URL}/skills`,
           {
             headers: {
               Authorization:
@@ -255,7 +256,7 @@ const Skills = () => {
               <div key={skill.id} className="skill-card">
                 <div className="skill-icon-wrapper">
                   <img
-                    src={`http://localhost:5000/${skill.icon}`}
+                    src={`${API_URL}/${skill.icon}`}
                     alt={skill.name}
                   />
                 </div>
@@ -295,7 +296,7 @@ const Skills = () => {
                 <div key={tool.id} className="skill-card">
                   <div className="skill-icon-wrapper">
                     <img
-                      src={`http://localhost:5000/${tool.icon}`}
+                      src={`${API_URL}/${tool.icon}`}
                       alt={tool.name}
                     />
                   </div>
